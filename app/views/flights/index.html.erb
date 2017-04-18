@@ -1,0 +1,14 @@
+<h1>FLights!!</h1>
+
+<% @passengers.each do |passenger| %>
+  name: <%= passenger.name %>
+  ticket_number: <%= passenger.ticket_number  %>
+  <% passenger.aircrafts.each do |aircraft| %>
+  tail_number: <%= aircraft.tail_number %>
+  weight: <%= aircraft.weight %>
+  location: <%= aircraft.location %>
+  aircraft_id: <%= aircraft.id  %>
+<% end %>
+<% end %>
+
+<%= button_to 'See Itinerary' %>
